@@ -1,0 +1,150 @@
+body {
+  background: linear-gradient(#111, #111);
+  filter: drop-shadow(8px 8px 20px #363b4e);
+  filter: contrast(120%);
+  filter: saturate(70%);
+  filter: brightness(1.2);
+}
+
+#drum-machine {
+  border: 50px groove #363b4e;
+  border-radius: 5%;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  display: grid;
+  width: 800px;
+  height: 500px;
+  background-color: #222;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    "release day ."
+    "buttons buttons buttons"
+    ". display artist";
+}
+
+header {
+  grid-area: release;
+  align-self: start;
+  justify-self: start;
+  padding: 5px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 15px;
+  color: #ff10F0;
+}
+
+h1 {
+  grid-area: day;
+  align-self: center;
+  justify-self: center;
+  border-bottom: 5px ridge #ff10F0;
+  border-width: thick;
+  padding-bottom: 10px;
+  border-radius: 10%;
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #ff10F0;
+  text-shadow: 2px 2px 4px #ed10f0;
+}
+
+#display {
+  grid-area: display;
+  align-self: center;
+  justify-self: center;
+  border-top: 5px ridge #ff10F0;
+  border-width: thick;
+  border-radius: 10%;
+  font-family: 'Great Vibes', cursive;
+  font-size: 26px;
+  color: #ff10F0;
+}
+
+footer {
+  grid-area: artist;
+  align-self: end;
+  justify-self: end;
+  padding: 5px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 15px;
+  color: #ff10F0;
+}
+
+.drum-pad {
+  padding: 20px;
+  font-size: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  height: 60px;
+  line-height: 0;
+  width: 60px;
+  text-align: center;
+  padding-left: 12px;
+  border: 2px solid #ff10f0;
+  font-family: 'Great Vibes', cursive;
+  background-color: #222;
+  box-shadow: 0 2px 4px 0 #ed10f0, 0 1px 6px 0 #dc00e0;
+  transition-duration: 1s;
+  cursor: pointer;
+  color: #ff10F0;
+}
+
+.drum-pad:hover {
+  background-color: #c4bbf0;
+}
+
+#buttons {
+  grid-area: buttons;
+  align-self: center;
+  justify-self: stretch;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    filter: drop-shadow(4px 4px 10px #e3ceb9);
+  }
+
+  #drum-machine {
+    border: 25px groove #cda882;
+    padding: 5px;
+    width: 400px;
+    height: 250px;
+  }
+
+  header {
+    padding: 2.5px;
+    font-size: 5px;
+  }
+
+  h1 {
+    border-bottom: 2.5px ridge #e7ca70;
+    padding-bottom: 5px;
+    font-size: 25px;
+  }
+
+  #display {
+    border-top: 2.5px ridge #e7ca70;
+    font-size: 13px;
+  }
+
+  footer {
+    padding: 2.5px;
+    font-size: 5px;
+  }
+
+  .drum-pad {
+    padding: 10px;
+    font-size: 15px;
+    margin: 20px;
+    height: 30px;
+    width: 30px;
+    padding-left: 8.25px;
+    border: 1px solid #672008;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  }
+
+  #buttons {
+    margin-left: 25px;
+  }
+}
